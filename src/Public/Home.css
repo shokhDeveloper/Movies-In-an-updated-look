@@ -1,0 +1,98 @@
+/* rgb(17, 17, 17) */
+body{
+    /* height: 200vh; */
+}
+.crick{
+    width: 100%;
+    height: 100vh;
+}
+.public_back{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+}
+.public_back img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;    
+    background-attachment: fixed;
+}
+.public_header{
+    width: 100%;
+    height: auto;
+    background: rgba(17, 17, 17, 0.575);
+}
+.public_nav_align .public_nav_logo  img{
+    filter: invert(0);
+}
+.public_nav_align{
+    display: flex;  
+    justify-content: space-between;
+    align-items: center;
+}
+.public_nav_ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 1rem;
+    list-style-type: none;
+    width: 70%;
+}
+.public_header_start{
+    display: flex;
+    flex-basis: 50%;
+    justify-content: space-between;
+}
+.public_hero{
+    padding-top: 10rem;
+    transition: 1s ease ;
+}
+.public_hero_link{
+    font-size: 35px;
+    text-decoration: none;
+    color: #fff;
+    display: block;
+}
+.public_hero_texts{
+    background: rgba(17, 17, 17, 0.72);
+    padding: 1rem;
+    width: 50%;
+    border-radius: 10px;
+}
+.animated_text h3:nth-child(1) {
+    animation-name: fadeInUp;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+.animated_text {
+    height: 70px;
+    overflow: hidden;
+}
+.animated_text h3{
+    line-height: 70px;
+}
+@keyframes fadeInUp{
+    0%{
+        margin-top: 0px;
+    }
+    25%{
+        margin-top: -70px;
+    }
+    50%{
+        margin-top: -140px;
+    }
+    75%{
+        margin-top: -210px;
+    }
+    100%{
+        margin-top: 0px;
+    }
+}
+.public_lorem{
+    color: #fff;
+    font-size: 18px;
+    letter-spacing: 2px;
+    word-spacing: 5px;
+    padding: 1rem 0rem;
+}

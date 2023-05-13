@@ -1,0 +1,70 @@
+#avtor{
+    text-align: center;
+}
+#avtor .avtor_title{
+    color: #fff;
+    font-size: 35px;
+    padding: 1rem;
+}
+.public_avtor{
+    display: grid;
+    grid-template: repeat(1, auto) / repeat(2, 50%);
+    justify-content: space-between;
+}
+.public_avtor_image{
+    width: auto;
+    height: 470px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    transition: 0.5s ease all;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.public_avtor_image img{
+    width: 65%;
+    height: 470px;
+    border-radius: 5px;
+}
+.public_avtor_image_intro{
+    width: 65%;
+    margin: 0 auto;
+    height: 0px;
+    position: absolute;
+    z-index: 3;
+    bottom: 0rem;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.655);
+    color: #fff;
+    transition: 0.5s ease all;
+}
+.public_avtor_image_intro h3{
+    font-size: 25px;
+    letter-spacing: 1px;
+}
+.public_avtor_image_intro h5{
+    font-size: 1.4rem;
+    color: goldenrod;
+}
+.public_avtor_image:hover .public_avtor_image_intro{
+    height: 80px;
+}
+.public_avtor_image img{
+    transition: 0.5s ease all;
+}
+.public_avtor_image:hover img{
+    opacity: 0.4;
+}
+.public_avtor_texts h2{
+    font-size: 30px;
+    color: goldenrod;
+    padding-bottom: 2rem;
+}
+.public_avtor_texts p{
+    font-size: 22px;
+    color: #fff;
+    letter-spacing: 1px;
+    line-height: 40px;
+}

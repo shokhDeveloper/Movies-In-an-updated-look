@@ -1,0 +1,25 @@
+.modal{
+    background: #fff;
+}
+.modal_header{
+    background: goldenrod;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding: 0.7rem;
+}
+.modal_header button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 20px;
+    padding: 0.3rem;
+    background: crimson;
+    color: #fff;
+    border: 1px solid transparent;
+    outline: 1px solid transparent;
+}
+.modal_header h3{
+    letter-spacing: 1px;
+    color: #000;
+}

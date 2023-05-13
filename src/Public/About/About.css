@@ -1,0 +1,67 @@
+.public_about{
+    text-align: center;
+    padding: 1rem;
+}
+.public_about h1{
+    color: #fff;
+}
+.public_about_cards{
+    display: grid;
+    grid-template: repeat(1, auto) / repeat(3, 28%);
+    margin: 2rem 0rem;
+    justify-content: space-between;
+}
+.public_about_card{
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    background: black;
+    transition: 0.5s ease all;
+}
+.public_about_card .public_about_card_intro{
+    height: 70px;
+    position: absolute;
+    z-index: 3;
+    bottom:0px;
+    color: red;
+    transition: 0.5s ease all;
+    background: rgba(0, 0, 0, 0.692);
+}
+.public_about_card img{
+    z-index: 0;
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+.public_about_card .public_about_card_intro h3{
+    color: goldenrod;
+    font-size: 30px;
+}
+.public_about_card p{
+    visibility: hidden;
+    margin: 5px;
+    opacity: 0;
+}
+.public_about_card:hover{
+    transform: scale(1.1);
+}
+.public_about_card:hover .public_about_card_intro{
+    height: 130px;
+    bottom: 0px;
+}
+.public_about_card:hover .public_about_card_intro p{
+    visibility: visible;
+    opacity: .9;
+    color: #fff;
+    font-size: 18px;
+    letter-spacing: 1px;
+    word-spacing: 5px;
+}
+.public_about_card_image{
+    transition: 0.5s ease all;
+}
+.public_about_card:hover  .public_about_card_image{
+    opacity: .2;
+}

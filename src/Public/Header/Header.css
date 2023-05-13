@@ -1,0 +1,102 @@
+header{
+    position: fixed;
+    transition: 0.5s ease all;
+    animation-name: header_animation;
+    animation-duration: 1.5s;
+    z-index: 5;
+}
+.public_active_header{
+    width: 100%;
+    background: rgb(17, 17, 17);
+}
+.public_page{
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    padding-bottom: 0.3rem; 
+}
+.public_nav{
+    padding: 1rem;
+}
+.public_active_page{
+    color: goldenrod;
+    text-decoration: none;
+    padding-bottom: 0.3rem;
+    border-bottom: 1px solid goldenrod;   
+    font-size: 20px;
+}
+.public_nav_ul li a{
+    transition: 0.5s ease all;
+}
+.public_header_end{
+    flex-basis: 15%;
+    display: flex;
+    justify-content: end;
+    list-style-type: none;
+}
+.public_header_li {
+    position: relative;
+    top: 0.7rem;
+}
+.public_header_end .sign{
+    color: goldenrod;
+    font-size: 20px;
+    text-decoration: none;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    text-align: center;
+}
+.sign a{
+    text-decoration: none;
+    color: goldenrod;
+    transition: 0.5s ease all;
+}
+.sign a:hover{
+    color: #fff;
+}
+@keyframes header_animation{
+    from{
+        transform: translateY(-100px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+}
+.public_header_bar{
+    position: absolute;
+    text-align: center;
+    list-style: none; 
+    width: 100%;
+    z-index: 0;
+    padding-top: 1rem;
+    display: none;
+}
+.public_header_bar li {
+    text-align: center;
+    width: 100%;
+    background: black;
+    padding: 0.5rem;
+    transition: 0.5s ease all;
+}
+.public_header_bar li:nth-child(1){
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+} 
+.public_header_bar li:nth-child(3){
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.public_header_bar li a{
+    color: #fff;
+    transition: 0.5s ease all;
+}
+.public_header_bar li:hover{
+    background: goldenrod;    
+}
+.public_header_bar li:hover  a{
+    color: #000;
+}
+.public_header_end li:hover  .public_header_bar{
+    display: block;
+}

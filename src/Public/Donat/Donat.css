@@ -1,0 +1,59 @@
+#donat{
+    color: #fff;
+    text-align: center;
+    margin-top: 2rem;
+}
+.donat_form{
+    width: 100%;
+    text-align: center;
+}
+.donat_form label{
+    display: block;
+    width: 30%;
+    text-align: center;
+    color: #000;
+    margin: 1rem auto;
+}
+.donat_form label:nth-child(2){
+    display: flex;
+    align-items: center;   
+    text-align: end;
+}
+.donat_form label:nth-child(2) input{
+    border: 1px solid transparent;
+    outline: 1px solid transparent;
+    /* padding: 0.5rem ; */
+    text-align: center;
+    font-size: 24px;
+}
+.donat_form label input:nth-child(odd){
+    width: 100%;    
+}
+.donat_form label input:nth-child(odd){
+    padding: 0.5rem;
+    font-size: 24px;
+    border: 1px solid transparent;
+    outline: 1px solid transparent;
+    border-radius: 10px;
+}
+.donat_form label:nth-child(2) span{
+    font-size: 20px;
+    padding-left: 0.5rem;
+}
+.donat_form form label input::placeholder{
+    color: goldenrod;
+}
+.donat_form  button{
+    padding: 0.5rem 1rem;
+    background: goldenrod;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    outline: 1px solid transparent;
+}
+.donat_form_items{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
