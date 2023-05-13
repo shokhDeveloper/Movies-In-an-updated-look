@@ -8,6 +8,7 @@ import { useEffect, useState } from "react"
 import { Modal } from "../../Modal"
 export const Donat = () => {
     const date = new Date()
+    let array = ["Salom"]
     const [modal, setModal] = useState(false)
     const [donatMan, setDonatMan] = useState("")
     const validationSchema = Yup.object({
@@ -63,7 +64,7 @@ export const Donat = () => {
                 </form>
                 </div>
             </div>
-            <Modal  modal={modal} setModal={setModal} title={"Donat muvaffaqiyatli amalga oshirildi"} disc={`ShokhDeveloper ga ishonganingiz uchun ming bora tashakkur ! Salomat bo'ling hurmatli ${donatMan}😊`}/>
+            <Modal donatMan={donatMan}  modal={modal} setModal={setModal} title={"Donat muvaffaqiyatli amalga oshirildi"} disc={`ShokhDeveloper ga ishonganingiz uchun ming bora tashakkur ! Salomat bo'ling hurmatli`}/>
         </div>
     )
 }
