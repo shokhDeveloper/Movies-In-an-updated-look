@@ -1,29 +1,32 @@
 import { useEffect, useRef, useState } from "react";
 import "./Modal.css";
 export const Modal = ({ children, title, modal, setModal, disc, donatMan }) => {
-  let string = disc.split(" ")
-  string.push(donatMan)
-  console.log(string)
-  const [discription, setDiscription] = useState(string.join(" ").split(" "));
+  const [discription, setDiscription] = useState(disc);
   let [idx, setIdx] = useState(0);
   const discDonat = useRef();
   const Typing = () => {
-    if (discription?.length > idx && donatMan !== null) {
-      discDonat.current.innerHTML +=
-        discription[idx] === "ShokhDeveloper"
-          ? `<span style="color: goldenrod">ShokhDeveloper</span>`
-          : ` ${discription[idx]}    `;
-        idx++;
-      setTimeout(Typing, 300);
+      if (discription?.length > idx) {
+        discDonat.current.innerHTML +=
+          discription[idx] === "ShokhDeveloper"
+            ? `<span style="color: goldenrod">ShokhDeveloper</span>`
+            : ` ${discription[idx]}`;
+          idx++;
+        setTimeout(Typing, 300);
+      }else{
+        discDonat.current.innerHTML += ` ${donatMan} 😊`
+        setTimeout(() => {
+          setModal(false)
+        }, 1500)
+      }
     }
-  };
   useEffect(() => {
-    if (discription?.length && modal === true) {
-      discDonat.current.innerHTML = null;
-      setIdx(0)
-      Typing();
+    if(modal === true && discription?.length ){
+      console.log("UseEffect ishladi ")
+      discDonat.current.innerHTML = null
+        setIdx(0)
+        Typing()
     }
-  }, [discription, modal]);
+  },[discription, modal, donatMan])
   return (
     <div style={{display: modal ? "flex" : "none",
     }} className="overlay_modal">
@@ -40,6 +43,7 @@ export const Modal = ({ children, title, modal, setModal, disc, donatMan }) => {
               className="disc_donat"
             ></p>
           ) : null}
+          {children}
         </div>
       </div>
     </div>

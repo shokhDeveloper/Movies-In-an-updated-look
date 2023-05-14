@@ -19,6 +19,7 @@ import { Audio } from "react-loader-spinner";
 import { About } from "../About";
 import { Avtor } from "../Avtor";
 import { Donat } from "../Donat";
+import { Footer } from "../Footer";
 export const Home = () => {
   let array = [money, Aven, b, jhon, ant, moneys, boy];
   const { auto, crick, setCrick } = useContext(Context);
@@ -97,6 +98,7 @@ export const Home = () => {
       <About/>
       <Avtor/>
       <Donat/>
+      <Footer/>
       </main>
     </>
   );
