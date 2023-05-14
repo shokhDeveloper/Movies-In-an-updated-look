@@ -22,24 +22,21 @@ import { Donat } from "../Donat";
 import { Footer } from "../Footer";
 export const Home = () => {
   let array = [money, Aven, b, jhon, ant, moneys, boy];
-  const { auto, crick, setCrick } = useContext(Context);
-  const [load, setLoad] = useState("load");
-  const loaderRef = useRef();
-  
+  const { auto, crick, setCrick } = useContext(Context); 
   const settings = {
     dots: true,
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: auto,
+    autoplay: auto === true ? true : false,
     speed: 2000,
     autoplaySpeed: 1000,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToShow: 1,
+          slidesToScroll: 1,
           infinite: true,
           dots: true,
         },
@@ -47,9 +44,9 @@ export const Home = () => {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1,
         },
       },
       {

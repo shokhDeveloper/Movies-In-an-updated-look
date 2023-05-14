@@ -1,13 +1,12 @@
 import "./Header.css"
 import TheBoys from "../../Settings/assets/videos/theboys.webm"
 import Logo from  "../../Settings/assets/images/logo.png"
-import { Link, NavLink } from "react-router-dom"
+import { Link} from "react-router-dom"
 import { LoginOutlined, ExportOutlined  } from "@ant-design/icons"
-import { useContext, useEffect, useState } from "react"
+import { useContext, useEffect } from "react"
 import { Context } from "../../Settings/Context/Context"
 export const Header = () => {
     const {setAuto, setActiveHeader, state, setState ,activeHeader} = useContext(Context)
-    
     const handleScroll = () => {
         if(window.scrollY > 10){
             setActiveHeader("public_active_header")
@@ -17,6 +16,12 @@ export const Header = () => {
             setAuto(true)
         }
     }
+    useEffect(() => {
+        if(state === "#home"){
+            console.log("ishladi")
+            setAuto(true)
+        }
+    },[state])
     useEffect(() => {
         window.addEventListener("scroll", handleScroll)
         return () => window.removeEventListener("scroll", handleScroll)

@@ -46,7 +46,7 @@
 import React, { useContext } from "react"
 import { Context, GlocalStyle } from "./Settings"
 import { Navigate, Route, Routes } from "react-router"
-import { Home } from "./Public"
+import { Home, SignIn } from "./Public"
 import {Home as PrivateHome} from "./Private"
 
 export const App = () => {
@@ -61,6 +61,7 @@ export const App = () => {
         ) : (
           <>
             <Route path="/*" element={<Home/>}/>
+            <Route path="/sign-in" element={<SignIn/>}/>
             <Route path="*" element={<Navigate to={"/"} replace={true}/>}/>
           </>
           

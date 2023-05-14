@@ -1,0 +1,41 @@
+.sign-in{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.sign-in .sign-in-title{
+    color: goldenrod;
+    font-size: 40px;
+}
+.sign-in .sign-in-error-title{
+    color: crimson;
+    font-size: 40px;
+}
+.sign-in-form{
+    width:30%;
+    margin: 0 auto;    
+}
+.sign-in-form label:nth-child(1){
+    width: 100%;
+}
+.sign-in-form label input{
+    margin: 1rem 0rem;
+}
+.sign-in-form label:nth-child(3){
+    background: #fff;
+    display: flex;
+    align-items: center;
+}
+.sign-in-form label:nth-child(3) input{
+    padding: 0;
+    margin: 0;
+    width: 100%; 
+    padding: 0.5rem;
+}
+.sign-in-form label:nth-child(3) span{
+    font-size: 20px;
+    padding-right: 0.5rem;
+}

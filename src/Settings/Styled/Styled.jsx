@@ -39,3 +39,44 @@ export const Btn = styled.button`
     border: 1px solid transparent;
     outline: 1px solid transparent;
 `
+export const SubmitterBtn = styled.button.attrs({
+    type:"submit"
+})`
+    padding: 0.5rem 1rem;
+    background: ${({variant}) => btn_object[variant].background };
+    color: ${({variant}) => btn_object[variant].color };
+    border-radius: 8px;
+    font-size: 18px;
+    border: 1px solid transparent;
+    outline: 1px solid transparent;
+    margin: ${({className}) => className === "submit" ? "1rem": "0rem"}
+`
+const Input_object = {
+    error:{
+        outline: "2px solid crimson"
+    },
+    default:{
+        outline: "2px solid transparent"
+    }
+}
+export const Input = styled.input`
+    padding: 0.5rem 1rem;
+    border: 1px solid transparent;
+    outline: ${({variant}) => Input_object[variant].outline };
+    background: #fff;
+    width:   100%;
+    display: block;
+    font-size: 20px;
+`
+export const LabelTextObject = {
+    error:{
+        color: "crimson"
+    },
+    default:{
+        color: "goldenrod"
+    }
+}
+export const LabelText = styled.small`
+    font-size: 14px;
+    color: ${({variant}) => LabelTextObject[variant].color};
+`
