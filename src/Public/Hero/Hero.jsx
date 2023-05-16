@@ -7,9 +7,9 @@ import { Fade } from "react-reveal"
 import Reveal from "react-reveal/Reveal"
 export const Hero = () => {
     const [text, setText] = useState(true)
-    const {activeHeader, crick} = useContext(Context)
+    const {activeHeader, crick, setTextNode} = useContext(Context)
     const navigate = useNavigate()
-    const loremRef = useRef()
+    let loremRef = useRef()
     const [state, setState] = useState("Hello, My name is ShokhDeveloper and I am a Front-end Developer and I studied at Najot ta'lim. My knowledge is HTML + CSS, SASS, Bootstrap, Javascript (Ecmascript 6), Git Github, React, Redux !".split(" "))
     const handleClick = event => {
         if(event.target.matches(".register_btn")){
@@ -22,17 +22,23 @@ export const Hero = () => {
     },[])
     let idx = 0 
     const Typing = () => {
-        let lorem = document.querySelector(".public_lorem")
          if(state.length > idx){
             idx++
-            lorem.innerHTML += state[idx] === "ShokhDeveloper" && state.splice(idx, 1)  ? ` <span style="color: goldenrod";>ShokhDeveloper</span>`:  ` ${state[idx-1]} ` 
+            loremRef.current.innerHTML += state[idx] === "ShokhDeveloper" && state.splice(idx, 1)  ? ` <span style="color: goldenrod";>ShokhDeveloper</span>`:  ` ${state[idx-1]} ` 
             setTimeout(Typing, 100)
+        }else{
+            setTextNode({
+                hero: true,
+                avtor: true
+            })
         }
     }
     useEffect(() => {
             if(state.length > idx && text === true && crick === true){
                 loremRef.current.innerHTML = null
                 Typing()
+            }else{
+                console.log("Tugadi")
             }
     },[crick])
     const handleScroll = event => {
@@ -58,8 +64,11 @@ export const Hero = () => {
                          </div>
                     </Link>
                         <h3 ref={loremRef} className="public_lorem">
+                        Hello, My name is ShokhDeveloper and I am a Front-end Developer and I studied at Najot ta'lim. My knowledge is HTML + CSS, SASS, Bootstrap, Javascript (Ecmascript 6), Git Github, React, Redux !
                         </h3>
-                    <Btn className="register_btn" variant="gold">Getting Started</Btn>
+                    <Btn className="register_btn" variant="gold" onClick={() => {
+                        navigate("/sign-in")
+                    }}>Getting Started</Btn>
                 </div>
                 </Fade>
             </div>

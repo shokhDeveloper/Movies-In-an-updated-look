@@ -1,0 +1,54 @@
+.sign-up{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.sign-up__title{
+    color: #fff;
+}
+.sign-up__form{
+    width: 30%;
+    margin: 0 auto;
+    text-align: start;
+}
+.sign-up__form label input{
+    margin: 0.5rem 0rem;
+}
+.sign-up__password{
+    display:flex;
+    align-items: center;
+    margin: 0.5rem 0rem;
+}
+.sign-up__password input{
+    padding: 0rem 1rem;
+    margin: 0;
+}
+.sign-up__password  span{
+    font-size: 20px;
+    padding: 0rem 0.5rem;
+}
+.sign-up__title_error{
+    color: crimson;
+}
+.google{
+    padding: 0.5rem 1rem;
+    font-size: 18px;
+    display: block;
+    margin: 0.5rem 0rem ;
+    background: #fff;
+    border: 1px solid transparent;
+    outline: 1px solid transparent;
+    border-radius: 5px;
+}
+.google::after{
+    content: " ";
+    display: inline-block;
+    width: 30px;
+    height: 20px;
+    background-image: url("../../Settings/assets/images/Google.png");
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: right;
+    transform: translateY(5px);
+}

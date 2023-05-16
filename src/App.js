@@ -48,6 +48,7 @@ import { Context, GlocalStyle } from "./Settings"
 import { Navigate, Route, Routes } from "react-router"
 import { Home, SignIn } from "./Public"
 import {Home as PrivateHome} from "./Private"
+import { SignUp } from "./Public/Sign-up"
 
 export const App = () => {
   const {token} = useContext(Context)
@@ -62,6 +63,7 @@ export const App = () => {
           <>
             <Route path="/*" element={<Home/>}/>
             <Route path="/sign-in" element={<SignIn/>}/>
+            <Route path="/sign-up" element={<SignUp/>}/>
             <Route path="*" element={<Navigate to={"/"} replace={true}/>}/>
           </>
           

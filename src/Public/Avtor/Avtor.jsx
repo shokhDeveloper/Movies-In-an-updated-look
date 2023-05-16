@@ -7,7 +7,7 @@ import { Context } from "../../Settings/Context/Context"
 import { useRef } from "react"
 export const Avtor = () => {
     const [text, setText] = useState("Hello, My name ShokhDeveloper and I am a Front-end Developer and I studied at Najot ta'lim. My knowledge is HTML + CSS, SASS, Bootstrap, Javascript (Ecmascript 6), Git Github, React, Redux ! I am the second child in the family and I keep my age a secret. I mainly work in Javascript programming language and am currently continuing to learn Typescript programming language. I live in Samarkand region of Uzbekistan and continue my career at Empire IT Academy. And in the future, I will still be the strongest programmer !".split(" "))
-    const {state} = useContext(Context)
+    const {state, setTextNode} = useContext(Context)
     const [typing, setTyping] = useState(false)
     let [idx, setIdx] = useState(0)
     const textRef = useRef()
@@ -19,6 +19,11 @@ export const Avtor = () => {
             disc.innerHTML += text[idx] === "ShokhDeveloper"  ? ` <span style="color: goldenrod;">ShokhDeveloper</span> ` : ` ${text[idx]} `  
             idx++
             setTimeout(Typing, 300)
+        }else{
+            setTextNode({
+                hero: true,
+                avtor: true
+            })
         }
     }
     

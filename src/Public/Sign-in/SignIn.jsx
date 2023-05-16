@@ -6,10 +6,12 @@ import { useEffect, useState } from "react"
 import { useFormik } from "formik"
 import {EyeOutlined, EyeInvisibleOutlined } from "@ant-design/icons"
 import * as Yup from "yup"
+import { useLocation, useNavigate } from "react-router"
 export const SignIn = () => {
     const [value, setValue] = useState()
     const [titleClass, setTitleClass] = useState("sign-in-title")
     const [type, setType] = useState(false)
+    const [nazad, setNazad] = useState(false)
     const formik = useFormik({
         initialValues: {
             email:"",
@@ -36,6 +38,17 @@ export const SignIn = () => {
             setTitleClass("sign-in-title")
         }
     },[formik?.errors])
+    const navigate = useNavigate()
+    const handleKey = event => {
+        console.log(event.keyCode)
+        if(event.keyCode === 27){
+            window.location.reload()
+        }
+    }
+    useEffect(() => {
+        window.addEventListener("keyup", handleKey)
+        return () => window.removeEventListener("keyup", handleKey)
+    },[])
     return(
         <div className="sign-in">
             <div className="container_fluid">
@@ -60,7 +73,7 @@ export const SignIn = () => {
                     </label>
                     <SubmitterBtn variant="gold" className="submit">Yuborish</SubmitterBtn>
                 </form>
-                <button onClick={handleClick}>Sign with google </button>
+            <Btn variant="gold" onClick={handleClick}>Google orqali kirish</Btn>
             </div>
         </div>
     )

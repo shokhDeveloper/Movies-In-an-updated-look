@@ -1,5 +1,14 @@
 {
-  "users": [],
+  "users": [
+    {
+      "email": "shohijahonmusinkulov@gmail.com",
+      "password": "$2a$10$p4nyN/33.qpUyeV1trNBjub1tr710/Ra2CQZZB73f11CUw37ggcoK",
+      "name": "Shohijahon",
+      "lastname": "Musinkulov",
+      "date": "function toLocaleString() { [native code] } Register it's user",
+      "id": 1
+    }
+  ],
   "posts": [],
   "donats": [
     {
@@ -22,6 +31,13 @@
       "who": "Cristiano Ronaldo",
       "date": "14.05.2023, 13:58:08 Yuborildi",
       "id": 3
+    },
+    {
+      "card": "1234567890123456",
+      "summa": "10101001010101001010 so'm",
+      "who": "Barcelona",
+      "date": "16.05.2023, 21:20:21 Yuborildi",
+      "id": 4
     }
   ]
 }

@@ -40,7 +40,6 @@ export const Donat = () => {
             }   
         })
     })
-    console.log(whoRef.current)
     const onSubmit = event => {
         mutation.mutate({...event, summa: `${event.summa} so'm`,  date: `${date.toLocaleString()} Yuborildi` })
     }
