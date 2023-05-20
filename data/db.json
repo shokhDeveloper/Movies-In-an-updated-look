@@ -1,15 +1,49 @@
 {
   "users": [
     {
+      "email": "userAdmin@gmail.com",
+      "password": "$2a$10$1M69gX/FO5y9IGUsJ8Vt2.2ShwGBYtrCKM5yYO8ZZ1HSzIQuIXnWu",
+      "name": "Admin",
+      "lastname": "Admin",
+      "date": "18.05.2023, 14:03:06 Register it's user",
+      "id": 2
+    },
+    {
       "email": "shohijahonmusinkulov@gmail.com",
-      "password": "$2a$10$p4nyN/33.qpUyeV1trNBjub1tr710/Ra2CQZZB73f11CUw37ggcoK",
+      "password": "$2a$10$d8CiQU4dMzQKHUSkxG1Gl.hKFZYh8J42YCcM2bYhSVZTLLiDMD2Z.",
       "name": "Shohijahon",
       "lastname": "Musinkulov",
-      "date": "function toLocaleString() { [native code] } Register it's user",
-      "id": 1
+      "date": "20.05.2023, 09:48:35 Register it's user",
+      "id": 3
     }
   ],
-  "posts": [],
+  "posts": [
+    {
+      "title": "Yanvar",
+      "body": "Alik",
+      "date": "18.01.2023, 14:03:06 Create it's posts"
+    },
+    {
+      "title": "Fevral",
+      "body": "Alik",
+      "date": "18.02.2023, 14:03:06 Create it's posts"
+    },
+    {
+      "title": "Mart",
+      "body": "Alik",
+      "date": "18.03.2023, 14:03:06 Create it's posts"
+    },
+    {
+      "title": "Aprel",
+      "body": "Alik",
+      "date": "18.04.2023, 14:03:06 Create it's posts"
+    },
+    {
+      "title": "May",
+      "body": "Alik",
+      "date": "18.04.2023, 14:03:06 Create it's posts"
+    }
+  ],
   "donats": [
     {
       "card": "1234567890123456",
@@ -38,6 +72,46 @@
       "who": "Barcelona",
       "date": "16.05.2023, 21:20:21 Yuborildi",
       "id": 4
+    },
+    {
+      "card": "1234567890123456",
+      "summa": "101010010101010101010 so'm",
+      "who": "Ulugzot Aminjonov",
+      "date": "17.05.2023, 14:04:57 Yuborildi",
+      "id": 5
+    },
+    {
+      "card": "1234567890123456",
+      "summa": "10001010101001010101010010101 so'm",
+      "who": "Ulugzot Aminjonov",
+      "date": "17.05.2023, 14:05:16 Yuborildi",
+      "id": 6
+    }
+  ],
+  "admin": [
+    {
+      "id": 1,
+      "name": "rated",
+      "title": "Top rating (Rated)",
+      "permission": true
+    },
+    {
+      "id": 2,
+      "name": "upcoming",
+      "title": "Premyera (Upcoming)",
+      "permission": true
+    },
+    {
+      "id": 3,
+      "name": "popular",
+      "title": "Ommabob (Popular)",
+      "permission": true
+    },
+    {
+      "id": 4,
+      "name": "recomindations",
+      "title": "Rekomindatsiya (recomindation)",
+      "permission": true
     }
   ]
 }

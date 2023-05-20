@@ -1,24 +1,47 @@
 import "./SignIn.css"
-import { Btn, Input, LabelText, SubmitterBtn } from "../../Settings"
+import { Btn, Context, Input, LabelText, SubmitterBtn } from "../../Settings"
 import { auth, Provider } from "./config"
 import {signInWithPopup} from "firebase/auth"
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import { useFormik } from "formik"
 import {EyeOutlined, EyeInvisibleOutlined } from "@ant-design/icons"
 import * as Yup from "yup"
 import { useLocation, useNavigate } from "react-router"
+import axios from "axios"
+import { useMutation } from "react-query"
+import { Modal } from "../../Modal"
 export const SignIn = () => {
-    const [value, setValue] = useState()
+    const date = new Date()
+    const {setToken, setUser} = useContext(Context)
+    const [modal, setModal] = useState(!true)
     const [titleClass, setTitleClass] = useState("sign-in-title")
     const [type, setType] = useState(false)
     const [nazad, setNazad] = useState(false)
+    const {isLoading, isError, isSuccess, mutate} = useMutation(data =>{
+        axios.post("http://localhost:7777/login", data).then((response) => {
+            if(response.status === 200){
+                let {accessToken, user} = response.data
+                if(accessToken !== null ||  accessToken !== undefined){
+                    setToken(accessToken)
+                    setUser(user)
+                }
+            }
+        }).catch((error) => {
+            if(error){
+                setModal(true)
+                setTimeout(() => {
+                    setModal(false)
+                }, 4000)    
+            }
+        })
+    })
     const formik = useFormik({
         initialValues: {
             email:"",
             password: "" 
         },
         onSubmit(event){
-            console.log(event)
+            mutate({...event, date: `${date.toLocaleString()} Login in useer`})
         },
         validationSchema: Yup.object({
             email: Yup.string().email("Email xato").required("Email kiritish majburiy"),
@@ -27,8 +50,9 @@ export const SignIn = () => {
     })
     const handleClick = () => {
         signInWithPopup(auth, Provider).then((data) => {
-            console.log(data)
-            setValue(data.user.email)
+            const {user} = data
+            setToken(user.accessToken)
+            setUser(user)
         })
     }
     useEffect(() => {
@@ -38,13 +62,12 @@ export const SignIn = () => {
             setTitleClass("sign-in-title")
         }
     },[formik?.errors])
-    const navigate = useNavigate()
     const handleKey = event => {
-        console.log(event.keyCode)
         if(event.keyCode === 27){
             window.location.reload()
         }
     }
+   
     useEffect(() => {
         window.addEventListener("keyup", handleKey)
         return () => window.removeEventListener("keyup", handleKey)
@@ -73,8 +96,9 @@ export const SignIn = () => {
                     </label>
                     <SubmitterBtn variant="gold" className="submit">Yuborish</SubmitterBtn>
                 </form>
-            <Btn variant="gold" onClick={handleClick}>Google orqali kirish</Btn>
+            <Btn variant="google" className="google" style={{margin: "0 auto"}} onClick={handleClick}>Google orqali kirish</Btn>
             </div>
+            <Modal title={"Xatolik"} error_text={"Mavjud bo'lmagan userni kiritdingiz !"} modal={modal} setModal={setModal}/>
         </div>
     )
 }

@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import "./Modal.css";
-export const Modal = ({ children, title, modal, setModal, disc, donatMan }) => {
+export const Modal = ({ children, title, modal, setModal, disc, donatMan, error_text }) => {
   const [discription, setDiscription] = useState(disc);
   let [idx, setIdx] = useState(0);
   const discDonat = useRef();
@@ -27,12 +27,31 @@ export const Modal = ({ children, title, modal, setModal, disc, donatMan }) => {
         Typing()
     }
   },[discription, modal, donatMan])
+  let index = 0
+  const TypingError = () => {
+    let error = document.querySelector(".error_text")
+    if(error_text){
+      console.log("keldi")
+      if(error_text.length > index){
+        error.innerHTML += error_text.charAt(index)
+        index++
+        setTimeout(TypingError, 100)
+      }
+    }
+  }
+  useEffect(() => {
+    if(error_text !== null && modal === true){
+      let error = document.querySelector(".error_text")
+        error.innerHTML = null
+        TypingError()
+    }
+  },[error_text, modal])
   return (
     <div style={{display: modal ? "flex" : "none",
     }} className="overlay_modal">
       <div className="modal">
-        <div className="modal_header">
-          <h3>{title}</h3>
+        <div style={{background: error_text ? "crimson": "gondenrod"}} className="modal_header">
+          <h3 style={{color: error_text ? "#fff": "black"}}>{title}</h3>
           <button onClick={() => setModal(!modal)}>&times;</button>
         </div>
         <div className="modal_body">
@@ -43,6 +62,11 @@ export const Modal = ({ children, title, modal, setModal, disc, donatMan }) => {
               className="disc_donat"
             ></p>
           ) : null}
+          {error_text? (
+            <p className="error_text">
+              
+            </p>
+          ): null}
           {children}
         </div>
       </div>

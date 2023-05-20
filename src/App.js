@@ -52,10 +52,11 @@ import { SignUp } from "./Public/Sign-up"
 
 export const App = () => {
   const {token} = useContext(Context)
+  console.log(token) 
   return(
     <React.Fragment>
       <Routes>
-        {token ? (
+        {token  !== null? (
           <>
               <Route path="/*" element={<PrivateHome/>}/>
           </>

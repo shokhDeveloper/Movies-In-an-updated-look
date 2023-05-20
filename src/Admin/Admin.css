@@ -1,0 +1,66 @@
+.admin{
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    /* display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    justify-content: center; */
+}
+.admin_statistika{
+    width: 100%;
+    min-height: 100vh;
+}
+.admin table{
+    width: 60%;
+    margin: 0 auto;
+    background: #fff;
+    border-collapse: collapse ;
+    border-radius: 10px;
+}
+.admin table th, .admin table td{
+    border: 1px solid black;
+    padding: 1rem;
+    font-size: 20px;
+}
+.admin table td input[type="checkbox"]{
+    width: 40px;
+    height: 20px;
+    border-radius: 10px;
+}
+.admin__title{
+    color: #fff;
+    padding: 1rem 0rem;
+    letter-spacing: 1px;
+    font-size: 35px;
+}
+.admin_links{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0rem;
+}
+.admin_links .admin_link{
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid transparent;
+}
+.admin_links{
+    transition: 0.5s ease all;
+}
+.admin_links .admin_active_link{
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #fff;
+}
+.admin_fikr{
+    width: 70%;
+}

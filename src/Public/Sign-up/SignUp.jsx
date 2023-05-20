@@ -1,7 +1,7 @@
 import "./Signup.css"
 import { useContext, useEffect, useRef, useState } from "react"
 import { useNavigate } from "react-router"
-import { Context, Input, LabelText, SubmitterBtn } from "../../Settings"
+import { Btn, Context, Input, LabelText, SubmitterBtn } from "../../Settings"
 import { EyeOutlined, EyeInvisibleOutlined } from "@ant-design/icons"
 import { useForm } from "react-hook-form"
 import { yupResolver } from "@hookform/resolvers/yup"
@@ -61,7 +61,7 @@ export const SignUp = () => {
         mode: "onChange"
     })
     const onSubmit = async event => {
-        mutate({...event, date: `${date.toLocaleString} Register it's user` })
+        mutate({...event, date: `${date.toLocaleString()} Register it's user` })
     }
     useEffect(() => {
         if(errors?.name && errors?.lastname && errors?.email && errors?.password ){
@@ -110,7 +110,7 @@ export const SignUp = () => {
                         </span>
                     </label>
                     <SubmitterBtn variant="gold">Yuborish</SubmitterBtn>
-                    <button className="google" onClick={handleClick}>Google orqali kirish </button>
+                    <Btn variant="google" className="google">Google orqali kirish</Btn>
                 </form>
             </div>
         </div>

@@ -28,6 +28,13 @@ const btn_object = {
     black: {
         background: "black",
         color: "goldenrod",
+    },
+    google:{
+        padding: "0.5rem 1rem",
+        fontSize: "18px",
+        margin: "0.5rem 0rem" ,
+        background:" #fff",
+        borderRadius: "5px"
     }
 }
 export const Btn = styled.button`
@@ -38,6 +45,8 @@ export const Btn = styled.button`
     font-size: 18px;
     border: 1px solid transparent;
     outline: 1px solid transparent;
+    display: block;
+    margin: ${({className}) => className === "google" ? "1rem 0rem 0rem 0rem ": "0rem" };
 `
 export const SubmitterBtn = styled.button.attrs({
     type:"submit"

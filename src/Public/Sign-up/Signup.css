@@ -31,16 +31,6 @@
 .sign-up__title_error{
     color: crimson;
 }
-.google{
-    padding: 0.5rem 1rem;
-    font-size: 18px;
-    display: block;
-    margin: 0.5rem 0rem ;
-    background: #fff;
-    border: 1px solid transparent;
-    outline: 1px solid transparent;
-    border-radius: 5px;
-}
 .google::after{
     content: " ";
     display: inline-block;

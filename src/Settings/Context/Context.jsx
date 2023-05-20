@@ -4,7 +4,7 @@ import { getItem, setItem } from "../Locals";
 export const Context = createContext()
 const {Provider} = Context
 export const ContextProvider = ({children}) => {
-    const locals = getItem("token")
+    const locals = getItem("token_portal")
     const [token, setToken] = useState(locals ? locals: null)
     useEffect(() => {
         if(token !== null){
