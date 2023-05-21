@@ -142,7 +142,7 @@ export const ColumnCharts = ({users}) => {
         <div id="chart">
           {resultMonth  > 0 ?(
 
-            <ReactApexChart options={ state?.options} series={state?.series} type="bar" width={1000} height={350} />
+            <ReactApexChart options={ state?.options} series={state?.series} type="bar" width={1000} height={400} />
           ) : null}
       </div>
     )

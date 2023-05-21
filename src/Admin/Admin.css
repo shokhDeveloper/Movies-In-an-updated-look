@@ -12,7 +12,7 @@
 }
 .admin_statistika{
     width: 100%;
-    min-height: 100vh;
+    /* min-height: 50vh; */
 }
 .admin table{
     width: 60%;

@@ -12,11 +12,11 @@ import { useMutation } from "react-query"
 import { Modal } from "../../Modal"
 export const SignIn = () => {
     const date = new Date()
+    const navigate = useNavigate()
     const {setToken, setUser} = useContext(Context)
     const [modal, setModal] = useState(!true)
     const [titleClass, setTitleClass] = useState("sign-in-title")
     const [type, setType] = useState(false)
-    const [nazad, setNazad] = useState(false)
     const {isLoading, isError, isSuccess, mutate} = useMutation(data =>{
         axios.post("http://localhost:7777/login", data).then((response) => {
             if(response.status === 200){
@@ -24,6 +24,7 @@ export const SignIn = () => {
                 if(accessToken !== null ||  accessToken !== undefined){
                     setToken(accessToken)
                     setUser(user)
+                    navigate("/")
                 }
             }
         }).catch((error) => {
@@ -53,6 +54,7 @@ export const SignIn = () => {
             const {user} = data
             setToken(user.accessToken)
             setUser(user)
+            navigate("/")
         })
     }
     useEffect(() => {

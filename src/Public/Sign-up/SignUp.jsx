@@ -31,6 +31,7 @@ export const SignUp = () => {
                 if(accessToken !== null || accessToken !== undefined){
                     setToken(accessToken)
                     setUser(user)
+                    navigate("/")
                 }
             }
         })
@@ -75,6 +76,7 @@ export const SignUp = () => {
             const {user}  = data
             setToken(user.accessToken)
             setUser(user)
+            navigate("/")
         })
     }
     watch()
@@ -110,7 +112,7 @@ export const SignUp = () => {
                         </span>
                     </label>
                     <SubmitterBtn variant="gold">Yuborish</SubmitterBtn>
-                    <Btn variant="google" className="google">Google orqali kirish</Btn>
+                    <Btn variant="google" className="google" onClick={handleClick}>Google orqali kirish</Btn>
                 </form>
             </div>
         </div>

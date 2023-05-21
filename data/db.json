@@ -15,6 +15,22 @@
       "lastname": "Musinkulov",
       "date": "20.05.2023, 09:48:35 Register it's user",
       "id": 3
+    },
+    {
+      "email": "leomessi@gmail.com",
+      "password": "$2a$10$OzCKe8f4QLdxa4TsX5oP7eGir/No5d50g5L3iptAiDI/a6tWwq4hC",
+      "name": "Messi",
+      "lastname": "Lionel",
+      "date": "21.05.2023, 11:25:16 Register it's user",
+      "id": 4
+    },
+    {
+      "email": "dostonqudratov@gmail.com",
+      "password": "$2a$10$ubeBFXj9KUAO4deLbs0Hqeh.hNPrjnLjQ5M6.s.XUiC2.65B8H4ZG",
+      "name": "Doston ",
+      "lastname": "Qudratov",
+      "date": "21.05.2023, 11:58:56 Register it's user",
+      "id": 5
     }
   ],
   "posts": [
@@ -109,8 +125,8 @@
     },
     {
       "id": 4,
-      "name": "recomindations",
-      "title": "Rekomindatsiya (recomindation)",
+      "name": "now-playing",
+      "title": "Hozirda suratga olinmoqda (now-playing)",
       "permission": true
     }
   ]

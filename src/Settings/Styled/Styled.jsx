@@ -69,13 +69,13 @@ const Input_object = {
     }
 }
 export const Input = styled.input`
-    padding: 0.5rem 1rem;
+    padding: ${({className}) => className === "search" ? 0: "0.5rem 1rem"};
     border: 1px solid transparent;
     outline: ${({variant}) => Input_object[variant].outline };
     background: #fff;
     width:   100%;
     display: block;
-    font-size: 20px;
+    font-size: ${({className}) => className === "search" ? "15px": "20px"};
 `
 export const LabelTextObject = {
     error:{

@@ -25,12 +25,13 @@ export const ContextProvider = ({children}) => {
     const [text, setText] = useState("public_hero_texts")
     const [crick, setCrick] = useState(false)
     const [state, setState] = useState("")
+    const [sidebar, setSidebar] = useState(false)
     const [textNode, setTextNode] = useState({
         hero:false,
         avtor: true
     })
     return(
-        <Provider value={{ textNode, setTextNode, state, setState, crick, setCrick,text, setText, activeHeader, setActiveHeader,auto , setAuto, language, setLanguage,token, setToken, user, setUser}}>
+        <Provider value={{sidebar, setSidebar, textNode, setTextNode, state, setState, crick, setCrick,text, setText, activeHeader, setActiveHeader,auto , setAuto, language, setLanguage,token, setToken, user, setUser}}>
             {children}
         </Provider>
     )
