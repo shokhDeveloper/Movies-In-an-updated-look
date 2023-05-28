@@ -31,7 +31,6 @@ export const Modal = ({ children, title, modal, setModal, disc, donatMan, error_
   const TypingError = () => {
     let error = document.querySelector(".error_text")
     if(error_text){
-      console.log("keldi")
       if(error_text.length > index){
         error.innerHTML += error_text.charAt(index)
         index++

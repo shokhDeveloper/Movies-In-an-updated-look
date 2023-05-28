@@ -32,7 +32,7 @@ export const Header = () => {
                 <div className="container_fluid">
                     <div className="public_nav_align">
                         <div className="public_header_start">
-                        <Link className="public_nav_logo" to={"/"}>
+                        <Link className="public_nav_logo" to={"/sign-in"}>
                             <img src={Logo} alt="Logo Movies" />
                         </Link>
                         <ul className="public_nav_ul">

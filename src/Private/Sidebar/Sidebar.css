@@ -1,0 +1,152 @@
+.sidebar_overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    display: none;
+}
+.private_sidebar{
+    width: 20%;
+    transform: translateX(-100%);
+    box-sizing: border-box;
+    min-height: 100vh;
+    background: black;
+}
+.private_header, .private_active_header{
+    background: rgba(0, 0, 0, 0.594);
+    animation-name: none;
+    position: inherit;
+}
+.private_header_items{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 1rem 0rem; */
+}
+.nav_ul{
+    flex-basis: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.private_sidebar_logo{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.7rem;
+}
+.private_sidebar_logo a{
+    flex-basis: 90%;
+    text-align: center;
+}
+.private_sidebar_logo button{
+    font-size: 30px;
+    color: #fff;
+    background: transparent;
+    padding: 0 0.5rem;
+    border: 1px solid transparent;
+    outline: 1px solid transparent;
+}
+.private_sidebar_logo img{
+    transition: 0.5s ease all;
+}
+.private_active_sidebar{
+    width: 20%;
+    min-height: 100vh;
+    background: black;
+}
+.LogoMini{
+    width: 35px;
+    object-fit: contain;
+}
+.sidebar_btn{
+background: transparent;
+    color: #fff;
+    font-size: 20px;
+    border: 1px solid transparent;
+    outline: 1px solid transparent;
+}
+.private_active_sidebar{
+    min-height: 100vh;
+    transform: translateX(0%);
+}
+.private_active_sidebar .sidebar__items, .private_sidebar .sidebar__items {
+    width: 100%;
+    text-align: center;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.private_active_sidebar .sidebar__items .sidebar__links, .private_sidebar .sidebar__items .sidebar__links{
+    width: 100%;
+}
+.private_active_sidebar .sidebar__items .sidebar_list, .private_sidebar .sidebar__items .sidebar_list, .private_active_sidebar .sidebar__items .sidebar_active_list, .private_sidebar .sidebar__items .sidebar_active_list{
+    width: 100%;
+    margin: 1.5rem 0rem;
+    background-color: transparent;
+    /* padding: 0.5rem; */
+    transition: 0.5s ease all;
+}
+.private_active_sidebar .sidebar__items .sidebar_list:nth-child(1), .private_sidebar .sidebar__items .sidebar_list:nth-child(1), .private_active_sidebar .sidebar__items .sidebar_active_list:nth-child(1), .private_sidebar .sidebar__items .sidebar_active_list:nth-child(1){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.private_active_sidebar .sidebar__items .sidebar_list:nth-child(2), .private_sidebar .sidebar__items .sidebar_list:nth-child(2), .private_active_sidebar .sidebar__items .sidebar_active_list:nth-child(2), .private_sidebar .sidebar__items .sidebar_active_list:nth-child(2){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.private_active_sidebar .sidebar__items .sidebar_list:nth-child(1)::before, .private_sidebar .sidebar__items .sidebar_list:nth-child(1)::before , .private_active_sidebar .sidebar__items .sidebar_active_list:nth-child(1)::before, .private_sidebar .sidebar__items .sidebar_active_list:nth-child(1)::before{
+    content: " ";
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-image: url("../../Settings/assets/images/Settings.png");
+    background-repeat: no-repeat;
+    background-position: calc(0%);  
+    position: absolute;
+    left: 1.5rem;
+    filter: invert(1);
+    background-size: 30px;
+}
+.private_active_sidebar .sidebar__items .sidebar_list .sidebar_link, .private_sidebar .sidebar__items .sidebar_list .sidebar_link, .private_active_sidebar .sidebar__items .sidebar_active_list .sidebar_link, .private_sidebar .sidebar__items .sidebar_active_list .sidebar_link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+.private_active_sidebar .sidebar__items .sidebar_list:hover, .private_sidebar .sidebar__items .sidebar_list:hover, .private_active_sidebar .sidebar__items .sidebar_active_list:hover, .private_sidebar .sidebar__items .sidebar_active_list:hover{
+    background: chocolate;
+}
+.private_active_sidebar .sidebar__items .sidebar_list:nth-child(2)::before, .private_sidebar .sidebar__items .sidebar_list:nth-child(2)::before , .private_active_sidebar .sidebar__items .sidebar_active_list:nth-child(2)::before, .private_sidebar .sidebar__items .sidebar_active_list:nth-child(2)::before{
+    content: " ";
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background-image: url("../../Settings/assets/images/Like.png");
+    background-repeat: no-repeat;
+    background-position: calc(0%);  
+    position: absolute;
+    left: 1rem;
+    /* filter: invert(1); */
+    background-size: 35px;
+}
+.sidebar__items .sidebar__links .sidebar_active_list{
+   background: chocolate;
+}
+.sidebar_link{
+    width: 100%;
+    height: 100%;
+    padding: 1rem 0rem;
+}
+.private_active_header{
+    background: black;
+}

@@ -1,5 +1,9 @@
+import { NavLink } from "react-router-dom";
 import styled,{createGlobalStyle} from "styled-components";
 export const GlocalStyle = createGlobalStyle`
+    ::-webkit-scrollbar{
+        display: none;
+    }
     *{
         margin: 0;
         padding: 0;
@@ -10,7 +14,6 @@ export const GlocalStyle = createGlobalStyle`
     .container_fluid{
         width: 95%;
         margin: 0 auto;
-        padding: 0 10px;
     }
     .error_text{
         color: crimson;
@@ -18,8 +21,18 @@ export const GlocalStyle = createGlobalStyle`
     .error_label{
         border: 2px solid crimson;
     }
+    .eye{
+        font-size: 22px;
+        padding: 0.5rem;
+    }
 `
 export const  Image = styled.image.attrs((params)=> console.log(params) )``
+export const LinkMovie = styled(NavLink)`
+    color: #fff;
+    padding-bottom: 0.5rem;
+    text-decoration: none;
+    font-size: 20px;
+`
 const btn_object = {
     gold:{
         background: "goldenrod",
@@ -37,6 +50,7 @@ const btn_object = {
         borderRadius: "5px"
     }
 }
+
 export const Btn = styled.button`
     padding: 0.5rem 1rem;
     background: ${({variant}) => btn_object[variant].background };
@@ -47,7 +61,28 @@ export const Btn = styled.button`
     outline: 1px solid transparent;
     display: block;
     margin: ${({className}) => className === "google" ? "1rem 0rem 0rem 0rem ": "0rem" };
-`
+    `
+    export const Input = styled.input`
+        padding: ${({className}) => className === "search" ? 0: "0.5rem 1rem"};
+        border: 1px solid transparent;
+        outline: ${({variant}) => Input_object[variant].outline };
+        background: #fff;
+        width:   100%;
+        display: block;
+        font-size: ${({className}) => className === "search" ? "15px": "20px"};
+    `
+    export const LabelTextObject = {
+        error:{
+            color: "crimson"
+        },
+        default:{
+            color: "goldenrod"
+        }
+    }
+    export const LabelText = styled.small`
+        font-size: 14px;
+        color: ${({variant}) => LabelTextObject[variant].color};
+    `
 export const SubmitterBtn = styled.button.attrs({
     type:"submit"
 })`
@@ -59,33 +94,16 @@ export const SubmitterBtn = styled.button.attrs({
     border: 1px solid transparent;
     outline: 1px solid transparent;
     margin: ${({className}) => className === "submit" ? "1rem": "0rem"}
-`
-const Input_object = {
-    error:{
-        outline: "2px solid crimson"
+    `
+    const Input_object = {
+        error:{
+            outline: "2px solid crimson"
     },
     default:{
         outline: "2px solid transparent"
     }
 }
-export const Input = styled.input`
-    padding: ${({className}) => className === "search" ? 0: "0.5rem 1rem"};
-    border: 1px solid transparent;
-    outline: ${({variant}) => Input_object[variant].outline };
+export const PasswordInput = styled.label`
     background: #fff;
-    width:   100%;
-    display: block;
-    font-size: ${({className}) => className === "search" ? "15px": "20px"};
-`
-export const LabelTextObject = {
-    error:{
-        color: "crimson"
-    },
-    default:{
-        color: "goldenrod"
-    }
-}
-export const LabelText = styled.small`
-    font-size: 14px;
-    color: ${({variant}) => LabelTextObject[variant].color};
+    width: 100%;
 `

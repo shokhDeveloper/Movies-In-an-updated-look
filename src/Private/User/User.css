@@ -1,3 +1,7 @@
+.routesX{
+    width: 100%;
+    padding-top: 4rem;
+}
 main{
     width: 100%;
 }
@@ -7,126 +11,9 @@ main{
     justify-content: space-between;
     align-items: flex-start;
 }
-.private_header{
+.private_header, .private_active_header{
     width: 100%;
-}
-.private_sidebar{
-    width: 5%;
-    min-height: 100vh;
-    background: black;
-}
-.private_header{
-    background: rgba(0, 0, 0, 0.594);
-    animation-name: none;
-    position: inherit;
-}
-.private_header_items{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    /* padding: 1rem 0rem; */
-}
-.nav_ul{
-    flex-basis: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.private_sidebar_logo{
-    width: 100%;
-    text-align: center;
-    padding: 0.7rem;
-}
-.private_sidebar_logo img{
-    transition: 0.5s ease all;
-}
-.private_active_sidebar{
-    width: 20%;
-    min-height: 100vh;
-    background: black;
-}
-.LogoMini{
-    width: 35px;
-    object-fit: contain;
-}
-.sidebar_btn{
-    background: transparent;
-    color: #fff;
-    font-size: 20px;
-    border: 1px solid transparent;
-    outline: 1px solid transparent;
-}
-.private_active_sidebar .sidebar__items, .private_sidebar .sidebar__items {
-    width: 100%;
-    text-align: center;
-    height: 80vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.private_active_sidebar .sidebar__items .sidebar__links, .private_sidebar .sidebar__items .sidebar__links{
-    width: 100%;
-}
-.private_active_sidebar .sidebar__items .sidebar_list, .private_sidebar .sidebar__items .sidebar_list, .private_active_sidebar .sidebar__items .sidebar_active_list, .private_sidebar .sidebar__items .sidebar_active_list{
-    width: 100%;
-    margin: 1.5rem 0rem;
-    background-color: transparent;
-    /* padding: 0.5rem; */
-    transition: 0.5s ease all;
-}
-.private_active_sidebar .sidebar__items .sidebar_list:nth-child(1), .private_sidebar .sidebar__items .sidebar_list:nth-child(1), .private_active_sidebar .sidebar__items .sidebar_active_list:nth-child(1), .private_sidebar .sidebar__items .sidebar_active_list:nth-child(1){
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-.private_active_sidebar .sidebar__items .sidebar_list:nth-child(2), .private_sidebar .sidebar__items .sidebar_list:nth-child(2), .private_active_sidebar .sidebar__items .sidebar_active_list:nth-child(2), .private_sidebar .sidebar__items .sidebar_active_list:nth-child(2){
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-.private_active_sidebar .sidebar__items .sidebar_list:nth-child(1)::before, .private_sidebar .sidebar__items .sidebar_list:nth-child(1)::before , .private_active_sidebar .sidebar__items .sidebar_active_list:nth-child(1)::before, .private_sidebar .sidebar__items .sidebar_active_list:nth-child(1)::before{
-    content: " ";
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    background-image: url("../../Settings/assets/images/Settings.png");
-    background-repeat: no-repeat;
-    background-position: calc(0%);  
-    position: absolute;
-    left: 1.5rem;
-    filter: invert(1);
-    background-size: 30px;
-}
-.private_active_sidebar .sidebar__items .sidebar_list .sidebar_link, .private_sidebar .sidebar__items .sidebar_list .sidebar_link, .private_active_sidebar .sidebar__items .sidebar_active_list .sidebar_link, .private_sidebar .sidebar__items .sidebar_active_list .sidebar_link {
-    color: #fff;
-    text-decoration: none;
-    font-size: 20px;
-}
-.private_active_sidebar .sidebar__items .sidebar_list:hover, .private_sidebar .sidebar__items .sidebar_list:hover, .private_active_sidebar .sidebar__items .sidebar_active_list:hover, .private_sidebar .sidebar__items .sidebar_active_list:hover{
-    background: chocolate;
-}
-.private_active_sidebar .sidebar__items .sidebar_list:nth-child(2)::before, .private_sidebar .sidebar__items .sidebar_list:nth-child(2)::before , .private_active_sidebar .sidebar__items .sidebar_active_list:nth-child(2)::before, .private_sidebar .sidebar__items .sidebar_active_list:nth-child(2)::before{
-    content: " ";
-    display: inline-block;
-    width: 35px;
-    height: 35px;
-    background-image: url("../../Settings/assets/images/Save_video.png");
-    background-repeat: no-repeat;
-    background-position: calc(0%);  
-    position: absolute;
-    left: 1rem;
-    filter: invert(1);
-    background-size: 35px;
-}
-.sidebar__items .sidebar__links .sidebar_active_list{
-   background: chocolate;
-}
-.sidebar_link{
-    width: 100%;
-    height: 100%;
-    padding: 1rem 0rem;
+    position: fixed !important;
 }
 .nav_ul{
     list-style: none;
@@ -172,4 +59,40 @@ main{
 }
 .nav_ul li a{
     transition: 0.5s ease all;
+}
+.sidebar__items .sidebar__links li:nth-child(2) a{
+    position: relative;
+}
+.sidebar__items .sidebar__links li:nth-child(2) a span{
+    position: absolute;
+    left: 1.6rem;
+    top: 1.5rem;
+    transform: translateY(-7px);
+    color: black;
+    font-size:20px;
+    font-weight: bold;
+}
+.private_active_sidebar{
+    width: 5%;  
+    position: fixed;
+}
+.private_active_sidebar .sidebar__items .sidebar__links  .sidebar_active_list:nth-child(2) span{
+    color: black;
+}
+.private_sidebar .sidebar__items .sidebar__links li:nth-child(2) a span{
+    color: black;
+    top: 0.5rem;
+}
+.trending_home_page_title{
+    color: #fff;
+    padding: 1rem 0rem;
+    font-size: 23px;    
+    letter-spacing: 1px;
+}
+.movies_text{
+    color: goldenrod;
+    text-decoration: underline;
+}
+.private_active_header{
+    background: #000;
 }

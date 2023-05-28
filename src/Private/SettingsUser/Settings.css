@@ -1,0 +1,63 @@
+.settings_user{
+    width: 100%;
+    height: auto;
+}
+.settings_user_links{
+    width: 25%;
+    display: flex;
+    justify-content: space-between;
+}
+.user_settings_items{
+    width: 100%;
+}
+.user_settings {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 2rem;
+}
+.user_settings form {
+    width: 30%;
+    margin: 0 auto;
+    /* border: 1px solid #ddd; */
+
+}
+
+.user_settings form  label{
+    width: 100%;
+    /* text-align: center; */
+    margin: 0 auto; 
+    text-align: start;
+}
+.user_settings form label input{
+    width: 100%;
+    margin: 0 auto;
+}
+.user_settings form  label:nth-child(5){
+    display: flex; 
+    align-items: center;
+}
+.user_settings form  label:nth-child(5) input{
+    width: 100%;
+}
+.edit{
+    background: #fff;
+    border: 1px solid transparent;
+    outline: 1px solid transparent;
+    padding: 0.4rem 1rem ;
+    font-size: 20px;
+    border-radius: 10px;
+}
+.user_settings_btns{
+    padding-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.user_settings form  label small{
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+    display: block; 
+}

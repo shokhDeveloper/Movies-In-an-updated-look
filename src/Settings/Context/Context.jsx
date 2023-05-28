@@ -30,8 +30,16 @@ export const ContextProvider = ({children}) => {
         hero:false,
         avtor: true
     })
+    const homeLinkLocals = getItem("home_link")
+    const [homeLink, setHomeLink] = useState(homeLinkLocals ? homeLinkLocals : "block" )
+    useEffect(() => {
+        if(homeLink !== null){
+            setItem("home_link", homeLink)
+        }
+    }, [homeLink])
+    const [popularPage, setPopularPage] = useState(1)
     return(
-        <Provider value={{sidebar, setSidebar, textNode, setTextNode, state, setState, crick, setCrick,text, setText, activeHeader, setActiveHeader,auto , setAuto, language, setLanguage,token, setToken, user, setUser}}>
+        <Provider value={{ popularPage, setPopularPage, sidebar, homeLink, setHomeLink,  setSidebar, textNode, setTextNode, state, setState, crick, setCrick,text, setText, activeHeader, setActiveHeader,auto , setAuto, language, setLanguage,token, setToken, user, setUser}}>
             {children}
         </Provider>
     )

@@ -11,7 +11,9 @@ export const User =  ({load}) => {
             <Sidebar/>
             <main>  
                 <Header/>
-                <RoutesX/>
+                <div className="routesX" >
+                <RoutesX load={load}/>
+                </div>
             </main>
         </div>
     )

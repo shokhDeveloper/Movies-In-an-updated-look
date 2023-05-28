@@ -72,7 +72,7 @@ export const Donat = () => {
                 </form>
                 </div>
             </div>
-            <Modal donatMan={donatMan}  modal={donatMan !== "" ? modal : false} setModal={setModal} title={"Donat muvaffaqiyatli amalga oshirildi"} disc={text}/>
+            <Modal donatMan={donatMan} modal={donatMan !== "" ? modal : false} setModal={setModal} title={"Donat muvaffaqiyatli amalga oshirildi"} disc={text}/>
         </div>
     )
 }

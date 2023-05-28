@@ -43,16 +43,14 @@
 // }
 // export default App;
 
-import React, { useContext } from "react"
+import React, {  useContext, useEffect } from "react"
 import { Context, GlocalStyle } from "./Settings"
 import { Navigate, Route, Routes } from "react-router"
 import { Home, SignIn } from "./Public"
 import {Home as PrivateHome} from "./Private"
 import { SignUp } from "./Public/Sign-up"
-
 export const App = () => {
   const {token} = useContext(Context)
-  console.log(token) 
   return(
     <React.Fragment>
       <Routes>
