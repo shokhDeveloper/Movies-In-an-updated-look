@@ -38,8 +38,9 @@ export const ContextProvider = ({children}) => {
         }
     }, [homeLink])
     const [popularPage, setPopularPage] = useState(1)
+    const [topRatedPage, setTopRatedPage] = useState(1)
     return(
-        <Provider value={{ popularPage, setPopularPage, sidebar, homeLink, setHomeLink,  setSidebar, textNode, setTextNode, state, setState, crick, setCrick,text, setText, activeHeader, setActiveHeader,auto , setAuto, language, setLanguage,token, setToken, user, setUser}}>
+        <Provider value={{topRatedPage, setTopRatedPage, popularPage, setPopularPage, sidebar, homeLink, setHomeLink,  setSidebar, textNode, setTextNode, state, setState, crick, setCrick,text, setText, activeHeader, setActiveHeader,auto , setAuto, language, setLanguage,token, setToken, user, setUser}}>
             {children}
         </Provider>
     )

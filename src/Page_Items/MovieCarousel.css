@@ -1,0 +1,61 @@
+.movie_carousel{
+    width: 100%;
+    height: 300px;
+    overflow-y: hidden;
+    /* position: relative; */
+    transition: 0.5s ease all;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    border-radius: 10px;
+}
+.swipper-wrapper{
+    width: 100%;
+}
+.swipper-slide{
+    width: 100%;
+}
+.movie_carousel_intro{
+    height: 0px;
+    bottom: 0;
+    position: absolute;
+    transition: 0.5s ease all;
+    text-align: center;
+    background: black;
+    color: #fff;
+    width: 100%;
+}
+.movie_carousel img{
+    transition: 0.5s ease all;
+    height: 300px;
+    width: 100%;
+}
+.movie_carousel:hover img{
+    opacity: .5;
+}
+.movie_carousel_intro p{
+    color: goldenrod;
+    letter-spacing: 1px;
+    font-size: 19px;
+}
+.top_rated_movies{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.movie_carousel .like_btn{
+    position: absolute;
+    bottom: 0.3rem;
+    right: 0.3rem;
+    z-index: 2;
+}
+.movie_carousel:hover .movie_carousel_intro{
+height: 70px;
+bottom: 0;   
+transition: 0.5s ease all;
+}
+.movie_carousel_intro_texts{
+
+}

@@ -49,6 +49,7 @@ import { Navigate, Route, Routes } from "react-router"
 import { Home, SignIn } from "./Public"
 import {Home as PrivateHome} from "./Private"
 import { SignUp } from "./Public/Sign-up"
+import {ReactQueryDevtools} from "react-query/devtools"
 export const App = () => {
   const {token} = useContext(Context)
   return(
@@ -69,6 +70,7 @@ export const App = () => {
         )}
       </Routes>
       <GlocalStyle/>
+      <ReactQueryDevtools/>
     </React.Fragment>
   )
 }

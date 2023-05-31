@@ -12,7 +12,7 @@ export const Bar = () => {
     }
     const {isLoading, isError, isSuccess, data} = useQuery("/now_playing", getUpcomingMovie )
     const getActor = useCallback( async () => {
-        const request = await getApi.getCredits(data[0].id)
+        const request = await getApi.getCredits(data[0].id )
         const response = await request.data
         setDirektor(response.crew[2])
     },[isSuccess])
