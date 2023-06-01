@@ -1,10 +1,10 @@
-.top_rated_movies{
+.top_rated_movies, .upcoming_movies{
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
 }
-.top_rated_movies .movie_carousel{
+.top_rated_movies .movie_carousel, .upcoming_movies .movie_carousel{
     width: 30%;
     margin: 1rem 0rem;
 

@@ -1,10 +1,10 @@
 import ReactPaginate from "react-paginate"
+import "./Pagination.css"
 export const Pagination = (props) => {
     const handleChange = event => {
         props.setPage(event.selected+1)
-        console.log(props)
     }
     return(  
-        <ReactPaginate pageCount={props.pageCount}  onPageChange={handleChange} />
+        <ReactPaginate pageClassName="page_pagination" breakClassName="break" className="pagination" nextClassName="next" previousClassName="previous" pageCount={props.pageCount}  onPageChange={handleChange} />
     )
 }

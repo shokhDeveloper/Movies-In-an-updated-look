@@ -1,0 +1,28 @@
+.pagination{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0.5rem auto;
+    list-style-type: none;
+    margin-top: 1rem;
+}
+.page_pagination{
+    color: goldenrod;
+    font-size: 18px;
+}
+.break{
+    color: goldenrod;
+}
+.page_pagination:hover{
+    color: #fff;
+}
+.next, .previous{
+    background: goldenrod;
+    color: #fff;
+    border: 1px solid transparent;
+    outline: 1px solid transparent;
+    padding: 0.3rem 0.5rem;    
+    font-size: 20px;
+    border-radius: 10px;
+}
