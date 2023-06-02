@@ -96,3 +96,9 @@ main{
 .private_active_header{
     background: #000;
 }
+.private_search{
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 0.1rem 0.4rem;
+}

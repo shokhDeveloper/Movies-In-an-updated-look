@@ -27,7 +27,7 @@ const getUpComingMovies = useCallback(async () => {
     const request = await getApi.getUpcoming(upcomingPage+1);
     const response = await request.data;
     dispatch(Action.setPosts(response?.results))
-  },[upcomingPager])
+  },[upcomingPage])
   useEffect(() => {
     getHandleUpComing();
   }, [getHandleUpComing]);

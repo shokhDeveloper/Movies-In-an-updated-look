@@ -1,0 +1,9 @@
+.search_page_movies{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.search_page_movies .movie_carousel{
+    width: 30%;
+    margin: 1rem 0rem;
+}

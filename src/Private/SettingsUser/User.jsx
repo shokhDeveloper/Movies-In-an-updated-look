@@ -90,7 +90,7 @@ export const User = () => {
                         )}
                     </div>
             </div>
-            <Modal error_text={null} title={"Yangilandi"} disc={text} donatMan={"Leo Messi"}  modal={modal} setModal={setModal} />
+            <Modal error_text={null} title={"Yangilandi"} disc={text} donatMan={donatMan}  modal={modal} setModal={setModal} />
         </div>
     )
 }

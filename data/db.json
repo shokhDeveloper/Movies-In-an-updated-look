@@ -12,8 +12,8 @@
       "name": "Shohijahon",
       "lastname": "Musinkulov",
       "email": "shohijahonmusinkulov@gmail.com",
-      "password": "$2a$10$n6DASNrOotNo2k/S4v5SH.uJVzYeOiINKUiMZKwZftVyLRYbD0dMO",
-      "date": "01.06.2023-23:27 Yangilandi",
+      "password": "$2a$10$0Ecr28ilfGPHSAt8B/MuzeyMXW2XBCy4gZNrSOHKINnBqWUFTR/dm",
+      "date": "03.06.2023-0:50 Yangilandi",
       "status": "published",
       "id": 3
     },
@@ -110,6 +110,13 @@
       "who": "Saidbek",
       "date": "22.05.2023, 13:57:31 Yuborildi",
       "id": 7
+    },
+    {
+      "card": "1234567890123456",
+      "summa": "1000000 so'm",
+      "who": "Doston Qudratov",
+      "date": "02.06.2023, 17:33:56 Yuborildi",
+      "id": 8
     }
   ],
   "admin": [

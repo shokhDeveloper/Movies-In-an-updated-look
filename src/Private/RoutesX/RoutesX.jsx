@@ -1,5 +1,5 @@
 import { useRoutes } from "react-router"
-import { HomePage, NowPlaying, Popular, Upcoming, TopRated } from "../Pages"
+import { HomePage, NowPlaying, Popular, Upcoming, TopRated, Search } from "../Pages"
 import { useContext, useEffect } from "react"
 import { Context } from "../../Settings"
 import { Home } from "../Home/Home"
@@ -60,6 +60,10 @@ export const RoutesX = ({load}) => {
                {
                     path: "/settings/*",
                     element: <SettingsUser/>
+               },
+               {
+                    path: "/search_movie/:text",
+                    element: <Search/> 
                }
            ]
         }

@@ -4,10 +4,11 @@ import axios from "axios";
 import { useQuery } from "react-query";
 import { useContext } from "react";
 import { Context, Input, getItem } from "../../Settings";
-import { MenuFoldOutlined, MenuUnfoldOutlined } from "@ant-design/icons";
+import { MenuFoldOutlined, MenuUnfoldOutlined, SearchOutlined } from "@ant-design/icons";
 import { useState } from "react";
 import { useEffect } from "react";
 import {Fade} from "react-reveal"
+import Logo from "../../Settings/assets/images/favicon.png"
 export const Header = () => {
   const { user, token,  sidebar, setSidebar, homeLink, setHomeLink } = useContext(Context);
   const [state, setState] = useState("/");
@@ -36,7 +37,7 @@ export const Header = () => {
   }, [pathname]);
   const handleKey = (event) => {
     if (event.target.value.length > 1) {
-      navigate("/search_movie");
+      navigate(`/search_movie/${event.target.value}`);
     } else {
       navigate("/");
     }
@@ -190,13 +191,14 @@ export const Header = () => {
               </ul>
                 </Fade>  
 
-              <div className="private_search">
-                <Input
+              <div  className="private_search">
+                <Input style={{background: "transparent"}}
                   placeholder="Search movie ..."
                   onKeyUp={handleKey}
                   variant={"default"}
                   className="search"
                 />
+                <img src={Logo} style={{filter: "invert(1)"}} alt="" />
               </div>
             </div>
           </div>

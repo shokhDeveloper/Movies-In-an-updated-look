@@ -6,10 +6,11 @@ export const GlocalStyle = createGlobalStyle`
     }
     *{
         margin: 0;
-        padding: 0;
+        padding: 0; 
         box-sizing: border-box;
         font-family: "Poppins-Regular";
         scroll-behavior: smooth;
+        user-select: none;
     }
     .container_fluid{
         width: 95%;
@@ -63,10 +64,10 @@ export const Btn = styled.button`
     margin: ${({className}) => className === "google" ? "1rem 0rem 0rem 0rem ": "0rem" };
     `
     export const Input = styled.input`
-        padding: ${({className}) => className === "search" ? 0: "0.5rem 1rem"};
+        padding: ${(params) => params.className === "search" ? "0rem 0.5rem": "0.5rem 1rem"};
         border: 1px solid transparent;
         outline: ${({variant}) => Input_object[variant].outline };
-        background: #fff;
+        /* background: #fff; */
         width:   100%;
         display: block;
         font-size: ${({className}) => className === "search" ? "15px": "20px"};

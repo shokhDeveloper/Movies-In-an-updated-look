@@ -16,7 +16,6 @@ export const BarPopular = ({isSuccess:success}) => {
         
          <div className="bar_movies">
              {data?.slice(0,10)?.map(item => {
-                console.log(item)
                 return(
                 <Link style={{textDecoration: "none"}} to={`/movie/${item.id}`} className="bar_movie">
                     <img src={BASE_IMAGE+item.backdrop_path} alt="Image Movie" />
