@@ -3,7 +3,7 @@
     height: auto;
 }
 .settings_user_links{
-    width: 25%;
+    width: 30%;
     display: flex;
     justify-content: space-between;
 }
@@ -60,4 +60,34 @@
     padding-top: 0.5rem;
     padding-bottom: 1rem;
     display: block; 
+}
+.posts__page{
+    width: 100%;
+    height: auto;
+}
+.posts__page_header{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: end;
+}
+.posts__items , .my__posts_page{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+.post{
+    background: #fff;
+    flex-basis: 25%;
+    margin: 0.5rem;
+    padding: 1rem;
+    text-align: center;
+}
+.posts__items .my_post, .my__posts_page .my_post{
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }

@@ -49,6 +49,11 @@ const btn_object = {
         margin: "0.5rem 0rem" ,
         background:" #fff",
         borderRadius: "5px"
+    },
+    crimson:{
+        background: "crimson",
+        color: "#fff"
+    
     }
 }
 

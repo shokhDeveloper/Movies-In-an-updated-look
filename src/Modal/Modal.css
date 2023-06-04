@@ -39,3 +39,19 @@
 .modal_body{
     padding: 1rem;
 }
+.modal form{
+    width: 70%;
+    margin: 0 auto;
+    /* text-align: center; */
+}
+.modal form input{
+    width: 100%;
+    margin: 1rem auto;
+}
+.modal form button{
+    margin-top: 1rem;
+}
+.submit_label{
+    display: flex;
+    justify-content: center;
+}
