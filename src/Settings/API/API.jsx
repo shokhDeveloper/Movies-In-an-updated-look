@@ -84,5 +84,21 @@ export const getApi = {
                 headers: {Accept: "application/json", Authorization: `Bearer ${API_KEY_TOKEN}`}
             })
         )
+    },
+    getCredit(id){
+        return(
+            axios.get(`${BASE_URL.substring(0, 28)}/credit/${id}`,{
+                params: {api_key},
+                headers: {Accept: "application/json", Authorization: `Bearer ${API_KEY_TOKEN}`}
+            })
+        )
+    },
+    getCreditMovies(id){
+        return(
+            axios.get(`${BASE_URL.substring(0, 28)}/person/${id}/movie_credits`,{
+                params: {api_key},
+                headers: {Accept: "application/json", Authorization: `Bearer ${API_KEY_TOKEN}`}
+            })
+        )
     }
 }

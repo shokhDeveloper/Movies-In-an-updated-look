@@ -26,6 +26,12 @@ export const GlocalStyle = createGlobalStyle`
         font-size: 22px;
         padding: 0.5rem;
     }
+    .gold{
+        color: goldenrod;
+    }
+    .white{
+        color: #fff;
+    }
 `
 export const  Image = styled.image.attrs((params)=> console.log(params) )``
 export const LinkMovie = styled(NavLink)`

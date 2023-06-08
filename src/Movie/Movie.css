@@ -83,3 +83,36 @@
     position: relative;
     top: 2rem;
 }
+.credits{
+    width: 100%;
+    margin: 1rem 0rem;
+}
+.credit{
+    height: 400px;
+    overflow-y: hidden;
+    position: relative;
+    transition: 0.5s ease all;
+    z-index: 1;
+}
+.credit img{
+    width: 100%;
+    height: 400px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.credit_intro{
+    height: 0px;
+    transition: 0.5s ease all;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.credit:hover .credit_intro{
+    height: 50px;
+    background: black;
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: #fff;
+}

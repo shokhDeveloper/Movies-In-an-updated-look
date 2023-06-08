@@ -102,3 +102,19 @@ main{
     background: #fff;
     padding: 0.1rem 0.4rem;
 }
+header .sidebar_btn{
+    position: relative;
+    /* border: 1px solid green;     */
+}
+header .sidebar_btn .count_movies{
+    position: absolute;
+    font-size: 17px;
+    top: 0;
+    transform: translateY(-10px);
+    color: crimson;
+    font-weight: 900;
+}
+.home_page_trending .slick-slider{
+    width: 88%;
+    margin: 0;
+}

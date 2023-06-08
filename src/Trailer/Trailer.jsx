@@ -7,7 +7,8 @@ export const Trailer = ({id}) => {
     const handleGetVideo = useCallback(async () => {
         const request = await getApi.getVideos(id)
         const response = await request.data
-        setVideoId(response?.results[1]?.key)
+        console.log(response?.results)
+        setVideoId(response?.results[0]?.key)
     },[id])
     useEffect(() => {   
         handleGetVideo()

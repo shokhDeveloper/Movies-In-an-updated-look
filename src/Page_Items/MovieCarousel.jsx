@@ -2,6 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import "./MovieCarousel.css";
 import { Like } from "../Like";
 import { useState } from "react";
+import { BASE_IMAGE } from "../Settings";
 export const MovieCarousel = ({ id, img, name, year, item, likes }) => {
   const [like, setLike] = useState(false);
   const navigate = useNavigate()
@@ -15,7 +16,7 @@ export const MovieCarousel = ({ id, img, name, year, item, likes }) => {
   return (
     <>
       {likes ? (
-        <div onClick={handleClick} className="movie_carousel" style={{backgroundImage: `url(${img})`, borderRadius: "10px", border: "1px solid goldenrod"}}>
+        <div onClick={handleClick} className="movie_carousel" style={{backgroundImage: `url(${img ? BASE_IMAGE +  img : 'https://picum.photos/200/200'})`, borderRadius: "10px", border: "1px solid goldenrod", backgroundPosition: "center"}}>
           <Like like={like} setlike={setLike} item={item}/>
           <div className="movie_carousel_intro">
             <h2>{name?.split(" ")?.length > 3 ? name.split(" ").slice(0, 3).join(" ") : name }</h2>

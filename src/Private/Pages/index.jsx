@@ -4,3 +4,4 @@ export * from "./NowPlaying";
 export * from "./Popular";
 export * from "./Upcoming";
 export * from "./Search";
+export * from "./Credit";

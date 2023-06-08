@@ -1,0 +1,43 @@
+.credit_page{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    min-height: 90vh;
+    position: relative;
+}
+.credit__items{
+    display: grid;
+    grid-template: repeat(1, 400px) / repeat(2, 50%);
+    align-items: end;    
+    grid-gap: 10px;
+    padding-top: 2rem;
+    align-items: center;
+}
+.credit__texts{
+    text-align: center;
+}
+.credit__items img{
+    height: auto;
+    width: 50%;
+    margin-left: 5rem;
+}
+.credit_text__settings{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 1rem;
+}
+.credit__texts h2 {
+    font-size: 30px;
+    padding-bottom: 1rem;
+}
+.credit__texts h4{
+    line-height: 30px;
+    letter-spacing: 2px;
+    font-size: 18px;
+}
+.actor_show_btn{
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+}

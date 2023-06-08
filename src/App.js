@@ -45,13 +45,23 @@
 
 import React, {  useContext, useEffect } from "react"
 import { Context, GlocalStyle } from "./Settings"
-import { Navigate, Route, Routes } from "react-router"
+import { Navigate, Route, Routes, useLocation } from "react-router"
 import { Home, SignIn } from "./Public"
 import {Home as PrivateHome} from "./Private"
 import { SignUp } from "./Public/Sign-up"
 import {ReactQueryDevtools} from "react-query/devtools"
 export const App = () => {
-  const {token} = useContext(Context)
+  const {token, setMoviesShow} = useContext(Context)
+  const {pathname} = useLocation()
+  useEffect(() => {
+    if(pathname.substring(0, 7) === "/credit"){
+        // setMoviesShow("block")
+
+    }else{
+      setMoviesShow("none")
+      window.localStorage.removeItem("show_movies")
+    }
+  },[pathname])  
   return(
     <React.Fragment>
       <Routes>

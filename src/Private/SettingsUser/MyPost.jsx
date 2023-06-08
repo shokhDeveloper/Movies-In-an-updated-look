@@ -39,7 +39,7 @@ export const MyPost = ({id, handleGetPosts, post_id}) => {
             handleGetPosts()
         }
         const response = await request.data
-        console.logg(response)
+        return response
     }
     const handleClick =  (event) => {
         switch(event.target.id){

@@ -1,10 +1,11 @@
 import { useRoutes } from "react-router"
-import { HomePage, NowPlaying, Popular, Upcoming, TopRated, Search } from "../Pages"
+import { HomePage, NowPlaying, Popular, Upcoming, TopRated, Search, Credit } from "../Pages"
 import { useContext, useEffect } from "react"
 import { Context } from "../../Settings"
 import { Home } from "../Home/Home"
 import { Movuie } from "../../Movie"
 import { SettingsUser } from "../SettingsUser"
+import { LocalsMovie } from "../../LocalsMovie"
 export const RoutesX = ({load}) => {
     const {homeLink} = useContext(Context)
     let route;
@@ -64,6 +65,14 @@ export const RoutesX = ({load}) => {
                {
                     path: "/search_movie/:text",
                     element: <Search/> 
+               },
+               {
+                    path: "/locals_movie",
+                    element: <LocalsMovie/>
+               },
+               {    path: `/credit/:id`,
+                    element: <Credit/>
+
                }
            ]
         }

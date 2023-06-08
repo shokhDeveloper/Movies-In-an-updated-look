@@ -6,10 +6,12 @@ import {Fade} from "react-reveal"
 import { Like } from "../Like";
 import { useQuery } from "react-query";
 import { Trailer } from "../Trailer";
+import { Credits } from "./Credits";
 
 export const Movuie = () => {
   const { id } = useParams();
   const [movieId, setMovieId] = useState(0);
+  const [movieName, setMovieName] = useState("")
   const [direktor, setDirektor] = useState([]);
   const [producer, setProducer] = useState([]);
   const [company, setCompany] = useState([]);
@@ -25,6 +27,7 @@ export const Movuie = () => {
     const response = await request.data;
     setCompany(response.production_companies[0]);
     setMovieId(response.id);
+    setMovieName(response.title)
     return [response]
   }, [id]);
   const handleActor = useCallback(async () => {
@@ -51,7 +54,7 @@ export const Movuie = () => {
           <h1>Movies App</h1>
         </div>
         {isLoading && (
-            <h1>Yuklanmoqda</h1>
+            <h1 className="white" >Yuklanmoqda</h1>
         )}
         {isSuccess && (
             <React.Fragment>
@@ -81,8 +84,12 @@ export const Movuie = () => {
         <h1 className="error">Xatolik</h1>
       )}
       {isSuccess && (
+        <>
         <Trailer id={id}/>
+        <Credits id={movieId} name={movieName}/> 
+        </>
       )}
+
     </div>
   );
 };

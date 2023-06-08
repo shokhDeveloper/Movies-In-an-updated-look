@@ -42,8 +42,17 @@ export const ContextProvider = ({children}) => {
     const [upcomingPage, setUpcomingPage] = useState(1)
     const [searchPage, setSearchPage] = useState(1)
     const [nowPlayingPage, setNowPlayingPage] = useState(1)
+    const showLocals = getItem("show_movies")
+    const [moviesShow, setMoviesShow] = useState(showLocals ? showLocals: "none")
+    useEffect(() => {
+        if(moviesShow !== "none"){
+            setItem("show_movies", moviesShow)
+        }
+    },[moviesShow])
     return(
-        <Provider value={{topRatedPage, upcomingPage, searchPage, setSearchPage,  setUpcomingPage,  setTopRatedPage, popularPage, setPopularPage, sidebar, homeLink, setHomeLink,  setSidebar, textNode, setTextNode, state, setState, crick, setCrick,text, setText, activeHeader, setActiveHeader,auto , setAuto, language, setLanguage,token, setToken, user, setUser, nowPlayingPage, setNowPlayingPage}}>
+        <Provider value={{topRatedPage, upcomingPage, searchPage, setSearchPage,  setUpcomingPage,  
+            moviesShow, setMoviesShow,
+        setTopRatedPage, popularPage, setPopularPage, sidebar, homeLink, setHomeLink,  setSidebar, textNode, setTextNode, state, setState, crick, setCrick,text, setText, activeHeader, setActiveHeader,auto , setAuto, language, setLanguage,token, setToken, user, setUser, nowPlayingPage, setNowPlayingPage}}>
             {children}
         </Provider>
     )

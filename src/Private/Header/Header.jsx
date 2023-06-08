@@ -9,6 +9,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import {Fade} from "react-reveal"
 import Logo from "../../Settings/assets/images/favicon.png"
+import { useCart } from "react-use-cart";
 export const Header = () => {
   const { user, token,  sidebar, setSidebar, homeLink, setHomeLink } = useContext(Context);
   const [state, setState] = useState("/");
@@ -60,6 +61,8 @@ export const Header = () => {
   useEffect(() => {
     window.addEventListener("scroll", handleScroll)
   },[])
+  const {totalItems} = useCart()
+
   return (
     <>
       <header className={headerClass}>
@@ -70,7 +73,14 @@ export const Header = () => {
                 className="sidebar_btn"
                 onClick={() => setSidebar(!sidebar)}
               >
-                {sidebar ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
+             {sidebar ?(
+                   <MenuUnfoldOutlined ></MenuUnfoldOutlined>
+                   ) :( 
+                   <MenuFoldOutlined >
+                   </MenuFoldOutlined>)}
+                    <span className="count_movies">
+                      {totalItems}
+                    </span>
               </button>
               <Fade left>
               <ul className="nav_ul">
